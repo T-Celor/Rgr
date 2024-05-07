@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  rgrback:
+    image: rgrback:latest
+    ports:
+      - "9080:9080"
+    networks:
+      - my-network
+
+  rgrfront:
+    image: rgrfront:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - BACKEND_URL=http://rgr-back:9080
+    networks:
+      - my-network
+
+networks:
+  my-network:
