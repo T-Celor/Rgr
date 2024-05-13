@@ -97,7 +97,6 @@ public class MathFinance {
 
     // Calculate Annualized Volatility
     public static float calculateAnnualizedVolatility(List<Float> prices) {
-        System.out.println(calculateVariance(prices));
         float variance = (float) calculateVariance(prices);
         return (float) Math.sqrt(variance * 12) / prices.get(prices.size() - 1) * 100;
     }

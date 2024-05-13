@@ -51,7 +51,6 @@ public class YahooFinanceResource {
     @Path("/multiple") //Can be multiple stocks separate by ','
     public Uni<RestResponse<List<SingleChartMetadata>>> getStocksData(@QueryParam("tickers") String tickers,
             @QueryParam("accumulating") Boolean accumulating) {
-        System.out.println(tickers);
         long ts = System.currentTimeMillis() / 1000;
         List<String> tickerList = Arrays.stream(tickers.split(",")).map(String::trim).collect(Collectors.toList());
         return Multi.createFrom().iterable(tickerList)
