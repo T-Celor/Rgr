@@ -52,7 +52,7 @@ export default {
                 { name: 'Volatility', value: `${this.data.volatility.toFixed(2)}%` },
                 { name: 'Sharpe Ratio', value: `${this.data.sharpeRatio.toFixed(2)}` },
                 { name: 'PE Ratio', value: `${this.data.pe.toFixed(2)}` },
-                { name: 'Dividend', value: `${this.data.startValue.toFixed(2)}%` },
+                { name: 'Dividend', value: `${this.data.dividend.toFixed(2)}%` },
                 { name: 'ROE', value: `${this.data.roe.toFixed(2)}%` },
                 { name: '# Month', value: `${this.data.value.length} (${(this.data.value.length / 12).toFixed(2)} years)` },
                 { name: 'CAGR', value: `${this.Acagr.toFixed(2)}%` },

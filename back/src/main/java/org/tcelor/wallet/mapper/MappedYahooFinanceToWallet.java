@@ -30,12 +30,16 @@ public class MappedYahooFinanceToWallet {
                 wallet.value.set(i, change * stockProportion + stockProportion + wallet.value.get(i));
             }
         }
+        System.out.println("Dividend");
         for (int i = 0; i < mappedYahooFinanceList.size(); i++) {
             wallet.dividend += mappedYahooFinanceList.get(i).dividend;
+            System.out.println(mappedYahooFinanceList.get(i).dividend);
             wallet.roe += mappedYahooFinanceList.get(i).roe;
             wallet.pe += mappedYahooFinanceList.get(i).pe;
         }
+        System.out.println("Total dividend");
         wallet.dividend /= mappedYahooFinanceList.size();
+        System.out.println(wallet.dividend);
         wallet.roe /= mappedYahooFinanceList.size();
         wallet.pe /= mappedYahooFinanceList.size();
         return wallet;
